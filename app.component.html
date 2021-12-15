@@ -1,28 +1,4 @@
-<section>
-    <div class="fact-weather">
-        <div class="title">Actual weather</div>
-        <div class="city">
-            <span class="city-title"> {{this.forCity}}</span>
-            <span class="time">{{time}}</span>
-        </div>
-        <div class="param-temp"> {{temperatureCelsius}} °C</div>
-        <div class="info">
-            <div class="press">
-                <span class="press-title">Atmospheric pressure</span>
-                <span class="press-param"> {{atmosphericPressurehPa}} hPa</span>
-            </div>
-            <div class="param">Humidity: {{humidity}} %</div>
-            <div class="wind"><span>Wind</span>
-                <span class="speed"> speed:  {{windSpeed}} m/s</span>
-                <div class="direct"> direction: {{windDirection}} </div>
-            </div>
-            <div class="icon">
-                <img class="images" src={{myImage}}{{weatherIcon}}.png width="80" />
-            </div>
-        </div>
-    </div>
-
-</section>
+<app-child [weatherDataCh]="weatherData"></app-child>
 <div class='city_list'>
     <p *ngFor=" let cityI of this.city ">
         <span (click)='weatherFor($event)'>{{cityI}} </span>
