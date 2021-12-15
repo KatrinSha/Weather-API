@@ -1,0 +1,19 @@
+.city_list {
+    display: flex;
+    flex-direction: column;
+    line-height: 0px;
+}
+
+button {
+    height: 30px;
+    width: 150px;
+    font-family: Montserrat;
+    font-size: 15px;
+    background: linear-gradient( 323.38deg, #f3f7fa 9.36%, #fff 88.73%);
+    border: 1px solid #2c323d;
+    border-radius: 3px;
+}
+
+span:hover {
+    color: purple;
+}

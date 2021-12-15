@@ -1,0 +1,7 @@
+<app-child [weatherDataCh]="weatherData"></app-child>
+<div class='city_list'>
+    <p *ngFor=" let cityI of this.city ">
+        <span (click)='weatherFor($event)'>{{cityI}} </span>
+    </p>
+</div>
+<button (click)=' onClick() '>Show countries</button>
