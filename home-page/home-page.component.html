@@ -1,0 +1,32 @@
+<h1>Local weather</h1>
+<section>
+    <div class="fact-weather">
+        <div class="title">Actual weather</div>
+        <div class="city">
+            <span class="city-title"> {{this.weatherData.forCity}}</span>
+            <span class="time">{{time}}</span>
+        </div>
+        <div class="param-temp"> {{this.weatherData.temperatureCelsius}} °C</div>
+        <div class="info">
+            <div class="press">
+                <span class="press-title">Atmospheric pressure</span>
+                <span class="press-param"> {{this.weatherData.atmosphericPressurehPa}} hPa</span>
+            </div>
+            <div class="param">Humidity: {{this.weatherData.humidity}} %</div>
+            <div class="wind"><span>Wind</span>
+                <span class="speed"> speed:  {{this.weatherData.windSpeed}} m/s</span>
+                <div class="direct"> direction: {{this.weatherData.windDirection}} </div>
+            </div>
+            <div class="icon">
+                <img class="images" src={{myImage}}{{this.weatherData.weatherIcon}}.png width="80" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class='city_list'>
+    <p *ngFor=" let cityI of this.city ">
+        <span routerLink="weather-data/{{cityI}}" (click)='this.chooseCity()'>{{cityI}} </span>
+    </p>
+</div>
+<button (click)=' onClick() '>Show countries</button>
